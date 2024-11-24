@@ -1,0 +1,497 @@
+:root {
+    --main-color: #9932CC;
+    --black: #13131a;
+    --bg: #010103;
+    --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    font-size: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.3s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+section {
+    padding: 15rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+}
+
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 0px 10px rgb(183, 0, 255),
+                 0px 0px 20px rgb(170, 0, 255),
+                 0px 0px 30px rgb(179, 0, 255),
+                 0px 0px 80px rgb(166, 0, 255);
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+    padding-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons img {
+    margin: 8rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+
+.btn {
+    background-color: #800080;
+    color: #ffffff;
+    padding: 1rem 3rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.btn:hover {
+    letter-spacing: 0.2rem;
+}
+
+.home-container {
+    background: url("./img/home-img.jpg") no-repeat;
+    height: 112vh;
+    background-position: center;
+    background-size: cover;
+    background-size: contain;
+}
+
+.home-container section {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.content {
+    max-width: 100rem;
+}
+
+.content h3 {
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 0px 0px 10px #9400D3,
+                 0px 0px 20px #9400D3,
+                 0px 0px 30px #9400D3,
+                 0px 0px 80px #9400D3;
+}
+
+.content p {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 100;
+    line-height: 2.5;
+    padding: 1rem 0;
+}
+
+.title {
+    font-size: 3rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.title span {
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 0px 10px #9400D3,
+                 0px 0px 20px #9400D3,
+                 0px 0px 30px #9400D3,
+                 0px 0px 80px #9400D3;
+}
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-size: 1.9rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.5;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    border: var(--border);
+    padding: 2rem;
+    cursor: pointer;
+}
+
+.menu .box-container .box:hover {
+    background-color:#DDA0DD;
+    
+}
+
+.menu .box-container .box:hover>* {
+    color: var(--black);
+}
+
+.menu .box-container .box img {
+    height: 10rem;
+}
+
+.menu .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+    text-shadow: 0px 0px 10px #9400D3,
+                 0px 0px 20px #9400D3,
+                 0px 0px 30px #9400D3,
+                 0px 0px 80px #9400D3;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.1rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span {
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.review .box-container .box p {
+    font-size: 2rem;
+    color: #ffffff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    text-shadow: 0px 0px 10px #9400D3,
+                 0px 0px 20px #9400D3,
+                 0px 0px 30px #9400D3,
+                 0px 0px 80px #9400D3;
+}
+
+.ice {
+    width: 200px;
+    height: 350px;
+    border-radius: 600px;
+    box-shadow: 0 5px 20px rgba(195, 50, 190, 0.5);
+    margin: 10px auto;
+    display: block;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.ice:hover {
+    transform: scale(1.1) rotate(8deg);
+    box-shadow: 0 10px 30px rgba(67, 11, 126, 0.8);
+}
+
+.footer {
+    background-color: #000000;
+    padding: 20px;
+    text-align: center;
+}
+
+.share {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.share img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.share img:hover {
+    transform: scale(1.1);
+}
+
+.search-container {
+    display: none;
+    align-items: center;
+}
+
+#searchInput {
+    padding: 6px;
+    margin-left: 5px;
+    border: 1px solid #ff2dc0;
+    border-radius: 50px;
+    font-size: 14px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Aumenta o tamanho no meio da animação */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+#searchButton {
+    padding: 5px 10px;
+    margin-left: 12px;
+    border: none;
+    background-color: #3e005f; /* Cor de fundo do botão */
+    color: white; /* Cor do texto */
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px rgb(99, 0, 138),
+                 0px 0px 20px rgb(59, 0, 88),
+                 0px 0px 30px rgb(96, 0, 138),
+                 0px 0px 80px rgb(102, 0, 156);
+    box-shadow: 0px 4px 10px rgba(135, 28, 190, 0.5), /* Sombra mais estilizada */
+                0px 8px 20px rgba(135, 28, 190, 0.3), /* Sombra mais difusa */
+                0px 12px 30px rgba(135, 28, 190, 0.2); /* Sombra mais sutil */
+    animation: pulse 1.3s infinite; /* Adiciona a animação de pulsação */
+}
+
+#searchButton:hover {
+    background-color: #9332b1; /* Cor de fundo ao passar o mouse */
+    box-shadow: 0px 4px 20px rgba(135, 28, 190, 0.6), /* Aumenta a sombra ao passar o mouse */
+                0px 12px 30px rgba(135, 28, 190, 0.4), /* Sombra mais difusa */
+                0px 16px 40px rgba(135, 28, 190, 0.3); /* Sombra mais sutil */
+}
+
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo escurecido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    backdrop-filter: blur(10px); /* Aumenta o efeito de desfoque ao fundo */
+    animation: fadeIn 0.5s; /* Animação de aparição do modal */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Inicia invisível */
+    }
+    to {
+        opacity: 1; /* Fica totalmente visível */
+    }
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px; /* Aumenta a borda do conteúdo */
+    width: 400px; /* Largura do modal */
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transições suaves */
+    transform: scale(0.9); /* Animação de escala ao abrir */
+}
+
+.close {
+    font-size: 3rem; /* Aumenta o tamanho do "X" */
+    color: #861cbe; /* Cor do "X" */
+    position: absolute; /* Posiciona o "X" no canto superior direito */
+    top: 20px; /* Ajuste a distância do topo conforme necessário */
+    right: 20px; /* Ajuste a distância da direita conforme necessário */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: color 0.3s ease; /* Transição suave para a cor */
+}
+
+.close:hover {
+    color: #b73dd8; /* Cor ao passar o mouse */
+}
+
+
+.modal-content.show {
+    transform: scale(1); /* Retorna à escala normal quando o modal é mostrado */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); /* Sombra aumentada quando visível */
+}
+
+.modal-header {
+    font-size: 32px; /* Tamanho da fonte do cabeçalho */
+    margin-bottom: 15px;
+    color: #861cbe; /* Cor do cabeçalho */
+    font-weight: bold; /* Negrito para o cabeçalho */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); /* Sombra no texto */
+}
+
+.modal-body {
+    font-size: 20px; /* Tamanho da fonte do corpo */
+    margin-bottom: 20px;
+    color: #333; /* Cor do texto */
+    line-height: 1.5; /* Aumenta a altura da linha para melhor legibilidade */
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-around; /* Espaçamento uniforme entre os botões */
+    margin-top: 20px; /* Margem acima do footer */
+}
+
+.modal-button {
+    padding: 10px 20px; /* Aumenta o padding do botão */
+    border: none;
+    border-radius: 5px;
+    background-color: #861cbe; /* Cor do botão */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições para a cor e transformação */
+}
+
+.modal-button:hover {
+    background-color: #9332b1; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Animação de aumento ao passar o mouse */
+}
+
+.hidden {
+    display: none;
+}
+
+#cart-list {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-list li {
+    margin-bottom: 12px; /* Aumenta o espaço abaixo de cada item */
+    padding: 20px; /* Aumenta o padding interno para dar mais espaço ao texto */
+    background-color: #f9f9f9; /* Fundo claro para os itens */
+    border-radius: 30px; /* Arredondar os cantos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona sombra para destacar cada item */
+    transition: background-color 0.3s; /* Transição suave ao passar o mouse */
+    font-size: 15px; /* Aumentado para melhor legibilidade */
+}
+
+#cart-list li:hover {
+    background-color: #e0e0e0; /* Cor ao passar o mouse sobre os itens */
+}
+
+/* Estilo para o total e endereço */
+.total {
+    font-size: 15px; /* Tamanho da fonte do total */
+    font-weight: bold; /* Negrito para destacar o total */
+    margin-top: 20px; /* Margem acima do total */
+    margin-bottom: 20px; /* Margem abaixo do total */
+    color: #333; /* Cor do texto */
+    text-align: center; /* Centraliza o texto */
+}
+
+#address {
+    font-size: 2px; /* Tamanho da fonte do endereço */
+    margin-bottom: 30px; /* Espaçamento abaixo do endereço */
+    color: #555; /* Cor do texto */
+    line-height: 1.4; /* Aumenta a altura da linha para melhor legibilidade */
+    text-align: center; /* Centraliza o texto */
+}
+
+#checkout-btn,
+#clear-cart-btn {
+    padding: 15px 20px; /* Aumenta o padding dos botões */
+    background-color: #6d00a8; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Transições para a cor e transformação */
+    margin-top: 10px; /* Adiciona espaço acima dos botões */
+}
+
+#checkout-btn:hover,
+#clear-cart-btn:hover {
+    background-color: #4b0d7a; /* Cor ao passar o mouse */
+    transform: scale(1.05); /* Animação de aumento ao passar o mouse */
+}
+
+.relative {
+    position: relative; /* Certifica-se de que o contêiner está posicionado corretamente */
+}
+
+
+#item-count {
+    position: absolute; /* Permite que o contador seja posicionado em relação ao contêiner */
+    top: 84px; /* Ajuste este valor conforme necessário */
+    right: 18px;
+    left: 3; /* Ajuste este valor conforme necessário */
+    text-shadow: 0px 0px 10px #9400D3,
+                 0px 90px 90px #9400D3,
+                 0px 0px 50px #9400D3,
+                 0px 0px 80px #9400D3;
+    color: white; /* Cor do texto */
+    border-radius: 50%; /* Arredonda os cantos para um contador circular */
+    padding: 1px 5px; /* Espaçamento interno */
+    font-size: 12px; /* Tamanho da fonte */
+    display: flex; /* Para centralizar o texto */
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+}
+
+
+
+
+
+

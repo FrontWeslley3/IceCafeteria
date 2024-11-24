@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <!-- Define que o documento é HTML5 e o idioma como português do Brasil. -->
+<head>
+    <meta charset="UTF-8">
+     <!-- Define a codificação de caracteres como UTF-8 para suportar todos os tipos de caracteres. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Faz o layout ser responsivo ajustando a largura da página ao dispositivo do usuário. -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Link para o arquivo CSS externo que vai aplicar estilos à página. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+     <!-- Importa a fonte 'Roboto' do Google Fonts com diferentes pesos. -->
+    <title>IceBlack Coffe</title>
+     <!-- Define o título da página que aparecerá na aba do navegador. -->
+    <link rel="icon" href="img/cafe.png"/>
+    <!-- Define o ícone que aparece na aba do navegador, ao lado do título. -->
+</head>
+
+<body>
+     <!-- Início do corpo da página. Tudo dentro desta tag será exibido no navegador. -->
+    <header class="header">
+         <!-- Cabeçalho da página, contendo o logo e o menu de navegação. -->
+        <section>
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="logo">
+                 <!-- Logotipo da empresa com um link que, neste caso, não leva a lugar algum (#). -->
+            </a>
+
+            <nav class="navbar">
+                <!-- Menu de navegação com links âncoras que levam a diferentes seções da página. -->
+                <a href="#home">Home</a>
+                <a href="#about">Sobre</a>
+                <a href="#menu">Menu</a>
+                <a href="sobre-mim.html">Sobre Mim</a>
+                <a href="#address">Endereço</a>
+            </nav>
+
+            <div class="icons">
+                 <!-- Div que contém os ícones de busca e carrinho de compras. -->
+                <img id="searchIcon" width="30" height="30" src="https://img.icons8.com/material-rounded/ffffff/search.png" alt="search" />
+                 <!-- Ícone de pesquisa que abre a barra de busca. -->
+                <div class="search-container" style="display: none;">
+                    <input type="text" placeholder="Pesquisar..." id="searchInput" />
+                    <button id="searchButton">Buscar</button>
+                     <!-- Campo de busca e botão de pesquisa que aparecem ao clicar no ícone de pesquisa. -->
+                </div>
+                <div class="relative inline-block flex items-center">
+                    <img id="cartIcon" width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/shopping-cart--v1.png" alt="shopping-cart--v1" />
+                    <!-- Ícone do carrinho de compras. -->
+                    <span id="item-count" class="absolute -top-2 -right-2 bg-red-500 text-white rounded-full px-1 text-xs">0</span>
+                    <!-- Contador de itens no carrinho. -->
+                </div>
+                
+                
+            </div>
+            
+            
+<!-- Modal do carrinho -->
+<div id="cart-modal" class="modal hidden">
+    <!-- Modal que aparece quando o carrinho é clicado, inicialmente escondido. -->
+    <div class="modal-content">
+        <span id="close-modal-btn" class="close">&times;</span>
+        <!-- Botão de fechar o modal (o 'X'). -->
+        <h2>Carrinho de Compras</h2>
+        <!-- Título do modal. -->
+        <ul id="cart-list"></ul>
+        <!-- Lista dos itens do carrinho. -->
+        
+        <p class="total">Total: R$ <span id="cart-total">0.00</span></p>
+        <!-- Mostra o valor total da compra. -->
+        
+        <p class="address" style="margin-top: 12px; font-size: 1.5rem;">Endereço de Entrega:</p>
+        <!-- Separação do endereço do total -->
+        <input type="text" id="delivery-address" placeholder="Insira seu endereço" style="width: 100%; margin-bottom: 20px;"/>
+        <!-- Campo para inserir o endereço de entrega. -->
+
+        <div class="modal-footer">
+            <button id="checkout-btn">Finalizar Compra</button>
+            <!-- Botão para finalizar a compra. -->
+            <button id="clear-cart-btn">Limpar Carrinho</button>
+            <!-- Botão para limpar o carrinho. -->
+        </div>
+    </div>
+</div>
+
+            
+           
+
+        </section>
+
+    </header>
+    <div class="home-container">
+        <section id="home">
+             <!-- Seção principal (Home) da página com o conteúdo principal. -->
+            <div class="content">
+                <h3>ICE COM O MELHOR CAFÉ DA REGIÃO </h3>
+                <!-- Título da seção Home. -->
+                <P>O Melhor Café da Região é o destino ideal para quem busca cafés especiais e deliciosos frappés,
+                     preparados por baristas apaixonados. Com um ambiente acolhedor e cardápio irresistível de doces e salgados, 
+                     cada visita transforma-se em uma experiência única. Venha saborear o melhor café da região!</P>
+                     <!-- Parágrafo descrevendo o café. -->
+                <a href="#" class="btn">Pegue o Seu AGORA!!</a>
+                <!-- Botão de chamada para ação. -->
+            </div>
+
+        </section>
+    </div>
+
+    <section class="about" id="about">
+        <!-- Seção "Sobre nós" com informações sobre o café. -->
+        <h2 class="title">Sobre<span>NÓS</span></h2>
+         <!-- Título da seção com destaque em "Nós". -->
+        <div class="row">
+            <div class="container-image">
+                <video width="450" height="400" autoplay muted loop>
+                    <!-- Vídeo em loop na seção Sobre nós. -->
+                    <source src="./img/coffe.mp4" type="video/mp4">
+                    <!-- Fonte do vídeo que será exibido. -->
+                    <!-- Mensagem caso o vídeo não seja suportado. -->
+                </video>
+            </div>
+            <div class="content">
+                 <!-- Subtítulo da seção. -->
+                <h3>Tudo que Você Busca Está Em Nosso Café</h3>
+                <p>Descubra no nosso café uma seleção de bebidas especiais e delícias artesanais,
+                    tudo preparado com carinho e qualidade. Oferecemos desde o café perfeito até lanches saborosos em um ambiente acolhedor. 
+                    Venha nos visitar e encontre tudo o que você busca em uma única experiência!</p>
+                    
+                <p>Na nossa cafeteria, você encontra desde cafés especiais até deliciosos acompanhamentos,
+                    tudo preparado com carinho e dedicação. Com um ambiente acolhedor e produtos de alta qualidade, 
+                    cada visita é uma experiência completa de sabor e conforto.</p>
+                <a href="#" class="btn">Saiba Mais!!</a>
+                <!-- Botão para saber mais. -->
+            </div>
+            
+        </div>
+    </section>
+    <section class="menu" id="menu">
+        <!-- Seção do menu com os produtos oferecidos. -->
+        <h2 class="title">Nosso<span>MENU</span></h2>
+        <div class="box-container">
+            <div class="box">
+                <img src="./img/menu-1.png" alt="item-1">
+                <!-- Imagem do produto do menu. -->
+                <h3>Café Coado</h3>
+                <div class="price">R$ 11,86 <span>R$ 14,90</span></div>
+                 <!-- Preço do produto, com o valor original riscado e o valor promocional. -->
+                <a href="#" class="btn add-to-cart" data-name="Café Coado" data-price="11.86">Adicione ao Carrinho</a>
+                 <!-- Botão para adicionar ao carrinho com dados do produto (nome e preço). -->
+            </div>
+
+             <!-- Outros itens do menu seguem o mesmo padrão. -->
+            
+            <div class="box">
+                <img src="./img/menu-2.png" alt="item-2">
+                <h3>Latte</h3>
+                <div class="price">R$ 20,86 <span>R$ 25,90</span></div>
+                <a href="#" class="btn add-to-cart" data-name="Latte" data-price="20.86">Adicione ao Carrinho</a>
+            </div>
+            
+            <div class="box">
+                <img src="./img/menu-3.png" alt="item-3">
+                <h3>Cappuccino</h3>
+                <div class="price">R$ 15,86 <span>R$ 18,90</span></div>
+                <a href="#" class="btn add-to-cart" data-name="Cappuccino" data-price="15.86">Adicione ao Carrinho</a>
+            </div>
+            
+            <div class="box">
+                <img src="./img/menu-4.png" alt="item-4">
+                <h3>Espresso</h3>
+                <div class="price">R$ 9,86 <span>R$ 13,90</span></div>
+                <a href="#" class="btn add-to-cart" data-name="Espresso" data-price="9.86">Adicione ao Carrinho</a>
+            </div>
+            
+            <div class="box">
+                <img src="./img/menu-5.png" alt="item-5">
+                <h3>Macchiato</h3>
+                <div class="price">R$ 18,86 <span>R$ 23,90</span></div>
+                <a href="#" class="btn add-to-cart" data-name="Macchiato" data-price="18.86">Adicione ao Carrinho</a>
+            </div>
+            
+            <div class="box">
+                <img src="./img/menu-6.png" alt="item-6">
+                <h3>Mocha</h3>
+                <div class="price">R$ 12,86 <span>R$ 15,90</span></div>
+                <a href="#" class="btn add-to-cart" data-name="Mocha" data-price="12.86">Adicione ao Carrinho</a>
+            </div>
+            
+
+    </section>
+
+
+
+                
+
+    </section>
+    <section class="address" id="address">
+        <!-- Seção de endereço com um iframe do Google Maps. -->
+        <h2 class="title">Nosso <span>Endereço</span></h2>
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d58528.822863203786!2d-46.28373605136724!3d-23.530652599999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cdd9c349787d19%3A0x2f83fabdd1d65aaa!2sCoffe%20Drew!5e0!3m2!1spt-BR!2sbr!4v1712636288509!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- Mapa integrado usando Google Maps com a localização da cafeteria. -->
+
+    </section>
+
+    <section class="footer">
+        <!-- Rodapé com links para redes sociais. -->
+        <div class="share">
+            <!-- Links para Instagram, GitHub e LinkedIn com ícones. -->
+           <a href="https://www.instagram.com/ice30black/" target="_blank">
+            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/ffffff/instagram-new.png" alt="instagram-new"/>
+           </a>
+
+  
+        </div>
+    </section>
+
+
+
+    <script src="script.js"></script>
+    <!-- Script JavaScript externo que vai adicionar interatividade à página. -->
+</body>
+
+</html>
